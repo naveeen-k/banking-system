@@ -1,5 +1,5 @@
 package com.banking.controller;
-// for merch conflic practice
+// this is impotent
 import com.banking.exception.AccountNotFoundException;
 import com.banking.exception.InsufficientFundsException;
 import com.banking.model.Account;
