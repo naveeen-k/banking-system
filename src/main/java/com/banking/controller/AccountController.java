@@ -31,7 +31,7 @@ public class AccountController {
     public String deleteAccount(int accountNumber) throws AccountNotFoundException {
         return service.deleteAccount(accountNumber);
     }
-
+    // this for push learnig
     public String updateName(int accountNumber, String name) throws AccountNotFoundException {
         return service.updateName(accountNumber, name);
     }
