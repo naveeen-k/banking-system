@@ -1,5 +1,6 @@
 package com.banking.controller;
-//this is impotent
+//this is impotentq
+// rebase practice in p1 branch
 import com.banking.exception.AccountNotFoundException;
 import com.banking.exception.InsufficientFundsException;
 import com.banking.model.Account;
@@ -30,7 +31,7 @@ public class AccountController {
     public String deleteAccount(int accountNumber) throws AccountNotFoundException {
         return service.deleteAccount(accountNumber);
     }
-
+    // this for push learnig
     public String updateName(int accountNumber, String name) throws AccountNotFoundException {
         return service.updateName(accountNumber, name);
     }
