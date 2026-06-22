@@ -6,7 +6,7 @@ import com.banking.exception.InsufficientFundsException;
 import com.banking.model.Account;
 import com.banking.model.AccountType;
 import com.banking.service.BankingService;
-
+// for fetch the learngin
 public class AccountController {
 
     private static AccountController instance;
