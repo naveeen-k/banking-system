@@ -2,13 +2,12 @@
 // this second cfuing
 // this the fetch breooo
 package com.banking.controller;
-// rebase practice in p1 branch
+
 import com.banking.exception.AccountNotFoundException;
 import com.banking.exception.InsufficientFundsException;
 import com.banking.model.Account;
 import com.banking.model.AccountType;
 import com.banking.service.BankingService;
-// for fetch the learngin
 public class AccountController {
 
     private static AccountController instance;
@@ -24,7 +23,7 @@ public class AccountController {
         }
         return instance;
     }
-    // for pr leaing
+
 
     public Account createAccount(String name, String phone, String email,
                                  AccountType type, int deposit) {
@@ -34,8 +33,7 @@ public class AccountController {
     public String deleteAccount(int accountNumber) throws AccountNotFoundException {
         return service.deleteAccount(accountNumber);
     }
-    // this for push learnig
-    // this from branch p1
+
     public String updateName(int accountNumber, String name) throws AccountNotFoundException {
         return service.updateName(accountNumber, name);
     }
@@ -51,7 +49,6 @@ public class AccountController {
     public String updateAccountType(int accountNumber, AccountType type) throws AccountNotFoundException {
         return service.updateAccountType(accountNumber, type);
     }
-    // chnge the main brach for rebase practice
     public String depositMoney(int accountNumber, int amount) throws AccountNotFoundException {
         return service.depositMoney(accountNumber, amount);
     }
@@ -65,7 +62,5 @@ public class AccountController {
             throws AccountNotFoundException, InsufficientFundsException {
         return service.transferMoney(senderAccountNumber, receiverAccountNumber, amount);
     }
-// no idea i idea
-    //
-    //the finla chanr
+
 }
