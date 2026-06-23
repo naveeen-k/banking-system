@@ -12,8 +12,8 @@ public class DatabaseInitializer {
 
     public static void initialize() {
 
-        String user = "root";
-        String password = "2005";
+        final String user = "root";
+        final String password = "2005";
 
         String serverUrl = "jdbc:mysql://localhost:3306/bankdb";
 

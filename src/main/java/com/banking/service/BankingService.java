@@ -32,10 +32,11 @@ public class BankingService {
         return instance;
     }
 
-    public Account createAccount(String name, String phone, String email,
+    public Account createAccount(String name,String phone, String email,
                                  AccountType type, int initialAmount) {
         int accountNumber = ++accountCounter;
         Account account = new Account(accountNumber, name, phone, email, initialAmount, type);
+
         accountRepository.save(accountNumber, account);
         return account;
     }
@@ -43,7 +44,6 @@ public class BankingService {
     public String deleteAccount(int accountNumber) throws AccountNotFoundException {
         if (accountRepository.findById(accountNumber) == null) {
             throw new AccountNotFoundException(String.valueOf(accountNumber));
-
         }
         accountRepository.delete(accountNumber);
         return "Account deleted successfully.";

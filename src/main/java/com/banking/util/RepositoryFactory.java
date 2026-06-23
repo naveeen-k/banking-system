@@ -5,7 +5,17 @@ import com.banking.repository.*;
 import java.util.Objects;
 
 public class RepositoryFactory {
-    static String dataBase = "mysql";
+
+    private static final String dataBase = AppConfig.get("db.mode");
+
+    static {
+        if (Objects.equals(dataBase, "mysql")) {
+            DatabaseInitializer.initialize();   // ← fires automatically here
+        }
+    }
+
+    private RepositoryFactory() {
+    }
 
     public static AccountRepository getAccountRepository() {
         if (Objects.equals(dataBase, "mysql")) {
